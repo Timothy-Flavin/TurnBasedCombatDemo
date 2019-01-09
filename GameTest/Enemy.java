@@ -25,7 +25,7 @@ public class Enemy extends Entity{
       bh = 10;
       ss = 2;
       sa = 3;
-      sh = 1;
+      sh = 2;
       xpReward = 5 * level;
       setParams(name, level, bs, ba, bh, ss, sa, sh, moveList);
     }

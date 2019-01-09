@@ -36,25 +36,25 @@ public class DisplayPanel extends JPanel{
 		battleBackground.paintIcon(this, g, 0, 0);
 		if(playerAlive){
 			g.setColor(Color.black);
-			g.drawRect(4, 124, 101, 11);
+			g.drawRect(99, 169, 101, 11);
 			g.setColor(Color.red);
-			g.fillRect(5, 125, 100, 10);
+			g.fillRect(100, 170, 100, 10);
 			g.setColor(Color.green);
-			g.fillRect(5, 125, 100*player.getHealth()/player.getMaxHealth(), 10);
+			g.fillRect(100, 170, 100*player.getHealth()/player.getMaxHealth(), 10);
 			g.setColor(Color.lightGray);
-			g.drawString(playerString, 5, 120);
-			playerSprite.paintIcon(this, g, 100, 100);
+			g.drawString(playerString, 100, 160);
+			playerSprite.paintIcon(this, g, 100, 200);
 		}
 		if(enemyAlive){
 			g.setColor(Color.black);
-			g.drawRect(4, 19, 101, 11);
+			g.drawRect(354, 19, 101, 11);
 			g.setColor(Color.red);
-			g.fillRect(5, 20, 100, 10);
+			g.fillRect(355, 20, 100, 10);
 			g.setColor(Color.green);
-			g.fillRect(5, 20, 100*enemy.getHealth()/enemy.getMaxHealth(), 10);
+			g.fillRect(355, 20, 100*enemy.getHealth()/enemy.getMaxHealth(), 10);
 			g.setColor(Color.lightGray);
-			g.drawString(enemyString, 5, 15);
-			enemySprite.paintIcon(this, g, 200, 0);
+			g.drawString(enemyString, 355, 16);
+			enemySprite.paintIcon(this, g, 350, 60);
 		}
 	}
 }

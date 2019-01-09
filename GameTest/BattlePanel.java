@@ -35,9 +35,9 @@ public class BattlePanel extends JPanel{
     movePool[3] = "nothing";
 
     displayPanel = new DisplayPanel();
-    displayPanel.setBounds(0, 0, 300, 200);
+    displayPanel.setBounds(0, 0, 500, 300);
     menuePanel = new JPanel();
-    menuePanel.setBounds(0, 200, 300, 100);
+    menuePanel.setBounds(0, 300, 500, 200);
     bBL = new BattleButtonListeners();
 /////////////////////////////////////////////////////////////////////////////////////////
     itemPanel = new JPanel();

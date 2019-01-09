@@ -17,7 +17,7 @@ public class MasterWindow extends JFrame{
     //adding panels needed
     player = new Player("player", 2);
     battlePanel = new BattlePanel(this);
-    pn = new OverWorldPanel("starterMap.jpg", "player", this);
+    pn = new OverWorldPanel("starterMap.png", "player", this);
     loss = new LoseScreen(this);
     winScreen = new WinScreen(this);
     pn.setPlayer(player);

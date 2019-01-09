@@ -23,6 +23,7 @@ public class OverWorldPanel extends JPanel implements ActionListener{
   private Player player;
   private Enemy enemy;
   private boolean playerExists = false;
+  private CreatureList cr = new CreatureList();
 
   public class AL implements KeyListener{
 
@@ -99,7 +100,9 @@ public class OverWorldPanel extends JPanel implements ActionListener{
         if(encountered){
           encountered = false;
           int l = random.nextInt(5) + 1;
-          enemy = new Enemy("batSquirrel", l);
+          int idRange = invisMap.getHighParam(mapName) - invisMap.getLowParam(mapName);
+          String creatureName = cr.getCreatureName(random.nextInt(idRange) + invisMap.getLowParam() + 1);
+          enemy = new Enemy(creatureName, l);
           eventCaller.Battle(enemy);
         }
       }
@@ -132,8 +135,8 @@ public class OverWorldPanel extends JPanel implements ActionListener{
 //start based on the panel size for a resizable screen
     mapX = invisMap.getMapStartX(mapName);
     mapY = invisMap.getMapStartY(mapName);
-    protagonistX = -mapX + 150;
-    protagonistY = -mapY + 150;
+    protagonistX = -mapX + 250;
+    protagonistY = -mapY + 250;
     System.out.println("protagonist x and y" + protagonistX + " " + protagonistY);
     this.setFocusable(true);
     requestFocusInWindow();
@@ -231,8 +234,8 @@ public class OverWorldPanel extends JPanel implements ActionListener{
   public void paintComponent(Graphics g){
         //System.out.println("painting stuff..");
         g.setColor(Color.lightGray);
-        currentMap.paintIcon(this, g, mapX, mapY);
-        currentCharacter.paintIcon(this, g, 100, 100);
+        currentMap.paintIcon(this, g, mapX-100, mapY-100);
+        currentCharacter.paintIcon(this, g, 200, 200);
         if(playerExists){
           g.drawString("Player Health: " + player.getHealth() + " / " + player.getMaxHealth(), 0, 20);
         }

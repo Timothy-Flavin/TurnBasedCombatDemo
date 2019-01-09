@@ -13,15 +13,15 @@ public class AttackList{
 		int sentNumber;
 
 		if(an.equals("bite")){
-			sentNumber = damage * 9/10;
+			sentNumber = damage * 3/10;
 			return sentNumber;
 		}
 		else if(an.equals("rest")){
-			sentNumber = damage*-1*4/10;
+			sentNumber = damage*-1*2/10;
 			return sentNumber;
 		}
 		else if(an.equals("slash")){
-			sentNumber = damage;
+			sentNumber = damage * 4/10;
 			return sentNumber;
 		}
 		else{
